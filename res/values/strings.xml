@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ListaNombres</string>
+    <string name="menu_nuevo">Nuevo...</string>
+    <string name="action_settings">Settings</string>
+    <string name="nombre">Escriba nombre</string>
+    <string name="escribeNombre">Nombre...</string>
+	<string name="addNombre">Añadir</string>
+	<string name="Cancelar">Cancelar</string>
+    <string name="borrar">Borrar</string>
+</resources>
