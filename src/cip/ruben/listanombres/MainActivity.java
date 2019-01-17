@@ -31,8 +31,8 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 
 		valores = new ArrayList<String>();
-		valores.add("Antonio Dominguez ¡vila");
-		valores.add("RubÈn Plasencia Galv·n");
+		valores.add("Antonio Dominguez √Åvila");
+		valores.add("Rub√©n Plasencia Galv√°n");
 		valores.add("Raul Palmero Ramos");
 		
 
@@ -43,43 +43,6 @@ public class MainActivity extends Activity {
 
 		lista.setAdapter(adapter);
 		lista.setTextFilterEnabled(true);
-
-		/*lista.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-
-			public boolean onItemLongClick(AdapterView<?> parent, View view,
-					int position, long id) {
-				final int posicion = position;
-
-				AlertDialog.Builder dialogo1 = new AlertDialog.Builder(
-						MainActivity.this);
-				dialogo1.setTitle("Importante");
-				dialogo1.setMessage("ø Elimina este nombre ?");
-				dialogo1.setCancelable(false);
-				dialogo1.setPositiveButton("Confirmar", new OnClickListener() {
-
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						valores.remove(posicion);
-						adapter.notifyDataSetChanged();
-						Toast.makeText(getApplicationContext(),
-								"Se ha eliminado", Toast.LENGTH_SHORT).show();
-
-					}
-				});
-				dialogo1.setNegativeButton("Cancelar", new OnClickListener() {
-
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						// TODO Auto-generated method stub
-
-					}
-				});
-				dialogo1.show();
-				return false;
-			}
-
-		});*/
-
 	}
 
 	@Override
@@ -111,22 +74,22 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
-	public void vistaAÒadir() {
+	public void vistaA√±adir() {
 		final AlertDialog dialogBuilder = new AlertDialog.Builder(this)
 				.create();
 		LayoutInflater inflater = this.getLayoutInflater();
 		View vista = inflater.inflate(R.layout.user_input_dalog_box, null);
 
 		final EditText et_nombre =(EditText) vista.findViewById(R.id.et_nombre);
-		Button b_aÒadir= (Button) vista.findViewById(R.id.b_add);
+		Button b_a√±adir= (Button) vista.findViewById(R.id.b_add);
 		Button b_cancelar = (Button) vista.findViewById(R.id.b_cancelar);
 
-		b_aÒadir.setOnClickListener(new View.OnClickListener() {
+		b_a√±adir.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				valores.add(et_nombre.getText().toString());
-				Toast.makeText(getApplicationContext(), "AÒadido", Toast.LENGTH_SHORT).show();
+				Toast.makeText(getApplicationContext(), "A√±adido", Toast.LENGTH_SHORT).show();
 				adapter.notifyDataSetChanged();
 				dialogBuilder.dismiss();
 				
@@ -156,7 +119,7 @@ public class MainActivity extends Activity {
 			return true;
 		}
 		if (id == R.id.nombreNuevo) {
-			vistaAÒadir();
+			vistaA√±adir();
 
 
 		}
